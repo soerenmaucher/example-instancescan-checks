@@ -188,6 +188,8 @@ Running business rules during transform may cause the transform to take longer t
 ### Avoid using getReference()
 getReference is no longer considered best practice due to its performance impact and it is recommended to use g_scratchpad or GlideAjax instead.
 
+### Use "last run datetime" for JDBC data loads
+In your JDBC data load configuration, ensure that the 'last run datetime' option is set to true and configure the target database field to serve as a timestamp, as this best practice enables incremental data loading and improves performance in data integration processes using JDBC.
 
 ## Category: Security
 ##Check Mandatory fields on incident
